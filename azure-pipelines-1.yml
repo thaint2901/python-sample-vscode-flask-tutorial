@@ -21,6 +21,10 @@ variables:
 
 stages:
 - stage: Build
+  pool:
+   name: Default
+   demands:
+    - Agent.Name -equals DESKTOP-GMP3RKS
   displayName: Build and push stage
   jobs:
   - job: Build
